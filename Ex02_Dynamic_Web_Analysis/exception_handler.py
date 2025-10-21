@@ -7,10 +7,10 @@ def handle_exception(e):
     
     if exc_tb:
         f_name = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-        line_nunber = exc_tb.tb_lineno
+        line_number = exc_tb.tb_lineno
     else:
         f_name = "Unknown File"
-        line_nunber = "Unknown Line"
+        line_number = "Unknown Line"
         
         print("-------------------------------------------------------")
         print(f"크롤링 중 오류 발생!")
