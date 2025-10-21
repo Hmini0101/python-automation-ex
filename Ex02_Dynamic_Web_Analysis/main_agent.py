@@ -12,6 +12,7 @@ import sys
 import traceback
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from .exception_handler import handle_exception
 
 
 def setup_driver():
@@ -79,14 +80,8 @@ def crawl_stock_rankings(driver):
                 print(f"종목명 : {name} / 현재가 : {price} / 등락률 : {change_rate}")
 
     except Exception as e:
-        exc_type, exc_obj, exc_tb = sys.exc_info()
-        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-        line_number = exc_tb.tb_lineno
-        print("-------------------------------------------------------")
-        print(f"발생 위치: 파일 '{fname}', {line_number}번째 라인 : {e}")
-        print("-------------------------------------------------------")
         
-        return []
+        return handle_exception(e)
     
 if __name__ == "__main__":
     driver = setup_driver()
