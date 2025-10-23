@@ -1,0 +1,3 @@
+2025-10-23 14:53:26,343 - APIClient - DEBUG - APIClent 초기화
+2025-10-23 14:53:26,343 - APIClient - INFO - API 데이터 조회 시작: URL=https://jsonplaceholder.typicode.com/posts
+2025-10-23 14:53:26,715 - APIClient - INFO - 데이터 수집 성공: 100개

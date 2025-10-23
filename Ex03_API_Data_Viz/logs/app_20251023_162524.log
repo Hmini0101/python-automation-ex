@@ -1,0 +1,6 @@
+2025-10-23 16:25:24,231 - APIClient - DEBUG - APIClent 초기화
+2025-10-23 16:25:24,231 - APIClient - INFO - API 데이터 조회 시작: URL=https://jsonplaceholder.typicode.com/posts
+2025-10-23 16:25:24,668 - APIClient - INFO - 데이터 수집 성공: 100개
+2025-10-23 16:25:24,670 - DataTransformer - DEBUG - DataTransformer 초기화 완료 , 원본 데이터 크기 : 100 행
+2025-10-23 16:25:24,670 - DataTransformer - INFO - 데이터 변환 시작
+2025-10-23 16:25:24,674 - DataTransformer - INFO - 데이터 변환 성공, 최종 데이터 크기: 81행
