@@ -41,32 +41,32 @@ class DataTransformer:
             return None
         
         
-if __name__ =="__main__":
+# if __name__ =="__main__":
     
     
     
-    current_dir = os.path.dirname(os.path.abspath(__file__)) #파일 뺴고난 폴더 경로
-    print(f"current_dir : {current_dir}")
-    project_root = os.path.abspath(os.path.join(current_dir, '..'))
-    print(f"project_root : {project_root}")
-    sys.path.append(project_root)
+#     current_dir = os.path.dirname(os.path.abspath(__file__)) #파일 뺴고난 폴더 경로
+#     print(f"current_dir : {current_dir}")
+#     project_root = os.path.abspath(os.path.join(current_dir, '..'))
+#     print(f"project_root : {project_root}")
+#     sys.path.append(project_root)
     
     
-    print("테스트 시작")
-    raw_client = APIClient()
-    raw_df = raw_client.fetch_data()
+#     print("테스트 시작")
+#     raw_client = APIClient()
+#     raw_df = raw_client.fetch_data()
     
-    if raw_df is not None and not raw_df.empty:
-        transformer = DataTransformer(raw_df)
-        transformed_df = transformer.transform()
+#     if raw_df is not None and not raw_df.empty:
+#         transformer = DataTransformer(raw_df)
+#         transformed_df = transformer.transform()
         
-        if transformed_df is not None:
-            print("변환된 데이터 프레임 확인")
-            print(transformed_df[['id', 'MA20']].head(10))
+#         if transformed_df is not None:
+#             print("변환된 데이터 프레임 확인")
+#             print(transformed_df[['id', 'MA20']].head(10))
             
-            print("MA20 추가됨")
-            transformed_df.info()
-        else:
-            print("테스트 실패 : 데이터 변환 실패")
-    else:
-        print("원본 api 데이터 가져오지 못함")
+#             print("MA20 추가됨")
+#             transformed_df.info()
+#         else:
+#             print("테스트 실패 : 데이터 변환 실패")
+#     else:
+#         print("원본 api 데이터 가져오지 못함")

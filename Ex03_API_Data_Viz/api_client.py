@@ -44,25 +44,3 @@ class APIClient:
             handle_exception(e)
             return None
         
-# if __name__ =="__main__":
-    
-    
-#     current_dir = os.path.dirname(os.path.abspath(__file__)) #파일 뺴고난 폴더 경로
-#     print(f"current_dir : {current_dir}")
-#     project_root = os.path.abspath(os.path.join(current_dir, '..'))
-#     print(f"project_root : {project_root}")
-    
-#     sys.path.append(project_root)
-    
-#     print("테스트 시작")
-    
-#     client = APIClient()
-#     test_df = client.fetch_data()
-    
-#     if test_df is not None and not test_df.empty:
-#         print("테스트 성공 - 데이터 프레임 확인 >>")
-#         print(test_df.head())
-#         print("데이터 요약 정보 >>")
-#         test_df.info()
-#     else:
-#         print("테스트 실패 : 데이터 가져오지 못함")
