@@ -1,0 +1,19 @@
+# 가상 환경 폴더 (필수 제외)
+venv/
+.venv/
+
+# 바이트코드 파일
+__pycache__/
+*.pyc
+*.pyd
+
+# 로깅 파일 (필수 제외)
+logs/
+*.log
+
+# 운영체제 관련 파일
+.DS_Store
+Thumbs.db
+
+# Matplotlib/Plotly 등 시각화 라이브러리 캐시
+.ipynb_checkpoints/

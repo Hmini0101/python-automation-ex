@@ -7,7 +7,7 @@ import os
 
 logger = setup_logger('DataVisualizer')
 
-class Datavisulizer:
+class DataVisualizer:
     # DataFrame 으로 데이터를 시각화
     
     def __init__(self, transformed_df: pd.DataFrame):
@@ -22,14 +22,17 @@ class Datavisulizer:
         logger.info("시각화 시작 : 가상 주가와 MA20 그래프 생성")
         
         try:
-            plt.figure(figsize=(10,6) )
-            plt.plot(self.df.index, self.df['id'], label='Virtual Price (ID)', color= 'blue', linewidth=1.5)
-            plt.title('Virtual Price vs. Virtual MA20 Trend (Post IDs)')
-            plt.xlabel('Post Index (Time)')
-            plt.ylabel('Value')
-            plt.legend()  # 범례 표시
-            plt.grid(True)
-            plt.tight_layout() # 그래프 요소가 잘리지 않게 조정
+            
+            # 가상 주가(ID) 그래프 그리기: 점선으로 변경
+            plt.plot(self.df.index, self.df['id'], 
+                    label='Virtual Price (ID)', color='blue', 
+                    linestyle='--', linewidth=1) # 점선(--)과 얇은 두께(1) 적용
+            
+            # 이동평균선(MA20) 그래프 그리기: 실선, 굵게 유지
+            plt.plot(self.df.index, self.df['MA20'], 
+                    label='Virtual MA20', color='red', 
+                    linewidth=3) # 더 굵게(3) 적용
+            
             
             plt.show()
             
